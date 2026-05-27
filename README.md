@@ -1,4 +1,4 @@
-# Zero-OS Light ![Tests](https://github.com/threefoldtech/zoslight/workflows/Tests%20and%20Coverage/badge.svg) [![Go Report Card](https://goreportcard.com/badge/github.com/threefoldtech/zos)](https://goreportcard.com/report/github.com/threefoldtech/zos)
+# Zero-OS Light ![Tests](https://github.com/threefoldtech/zos_light/workflows/Tests%20and%20Coverage/badge.svg) [![Go Report Card](https://goreportcard.com/badge/github.com/threefoldtech/zos)](https://goreportcard.com/report/github.com/threefoldtech/zos)
 
 Zero-OS Light is a streamlined variant of the autonomous operating system optimized for lighter hardware and edge devices. It maintains the core functionality of Zero-OS while reducing resource requirements for constrained deployment scenarios.
 
@@ -38,9 +38,9 @@ This repository is owned and maintained by TF-Tech NV, a Belgian company respons
 
 ## Documentation
 
-Start exploring the codebase by first checking the [documentation](https://github.com/threefoldtech/zosbase/tree/main/docs) and [specification documents](/specs).
+Start exploring the codebase by first checking the [documentation](https://github.com/threefoldtech/zos_base/tree/main/docs) and [specification documents](/specs).
 
-An [FAQ](https://github.com/threefoldtech/zosbase/blob/main/docs/faq/readme.md) is also available for common questions.
+An [FAQ](https://github.com/threefoldtech/zos_base/blob/main/docs/faq/readme.md) is also available for common questions.
 
 ## Setting up your development environment
 
@@ -55,11 +55,11 @@ Zero-OS is deployed on several network environments:
 - **QA network**: Internal testing of new features. Can be behind development. [Dashboard](https://dashboard.qa.grid.tf/)
 - **dev network**: Ephemeral network for developing and testing new features. Can be created and reset at any time. [Dashboard](https://dashboard.dev.grid.tf/)
 
-Learn more about the different networks by reading the [upgrade documentation](https://github.com/threefoldtech/zosbase/blob/main/docs/internals/identity/upgrade.md#philosophy).
+Learn more about the different networks by reading the [upgrade documentation](https://github.com/threefoldtech/zos_base/blob/main/docs/internals/identity/upgrade.md#philosophy).
 
 ### Provisioning of workloads
 
-Zero-OS does not expose an interface. Instead, it waits for reservations to happen on a trusted source, and once a reservation is available, the node applies it to reality. You can start reading about [provisioning](https://github.com/threefoldtech/zosbase/tree/main/docs/internals/provision) in this document.
+Zero-OS does not expose an interface. Instead, it waits for reservations to happen on a trusted source, and once a reservation is available, the node applies it to reality. You can start reading about [provisioning](https://github.com/threefoldtech/zos_base/tree/main/docs/internals/provision) in this document.
 
 ## Community
 
