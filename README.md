@@ -18,7 +18,7 @@ This repository contains Zero-OS Light, a variant of the autonomous node operati
 
 ## Role in the stack
 
-Zero-OS Light runs on edge and constrained hardware, providing the same autonomous workload management as the full Zero-OS but with lower overhead. It shares foundational libraries with zos and zos4 through zosbase, ensuring consistency in protocols and behavior across the OS family. Zinit supervises services, and the node coordinates with grid infrastructure for reservations and status reporting.
+Zero-OS Light runs on edge and constrained hardware, providing the same autonomous workload management as the full Zero-OS but with lower overhead. It shares foundational libraries with ZOS and ZOS v4 through ZOS Base, ensuring consistency in protocols and behavior across the OS family. ZOS Init supervises services, and the node coordinates with grid infrastructure for reservations and status reporting.
 
 ## ZOS / Zero-OS
 
