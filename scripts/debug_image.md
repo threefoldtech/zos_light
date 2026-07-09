@@ -49,7 +49,7 @@ NOTE:
 
 - [cloud-hypervisor](https://github.com/cloud-hypervisor/cloud-hypervisor): hypervisor that booting the machine
 - [virtiofsd](https://gitlab.com/muhamad.azmy/virtiofsd/): used to share a host directory for the rootfs. we are using a forked version
-- [rfs v1](https://github.com/threefoldtech/zos_rfs/tree/v1): mounts the flist file into a directory serving as the lower layer of the overlay file system.
+- [rfs v1](https://github.com/threefoldtech/rfs/tree/v1): mounts the flist file into a directory serving as the lower layer of the overlay file system.
 - `overlayfs`: mounts a read-write layer on the rootfs
 
 ## Script Walkthrough
@@ -101,7 +101,7 @@ NOTE:
 - **rfs**
 
     ```bash
-    wget https://github.com/threefoldtech/zos_rfs/releases/download/v1.1.1/rfs
+    wget https://github.com/threefoldtech/rfs/releases/download/v1.1.1/rfs
     chmod +x ./rfs
 
     sudo ln -s $(realpath ./rfs) /usr/local/bin/rfs1
