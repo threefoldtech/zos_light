@@ -106,7 +106,7 @@ check_or_install_deps() {
     fi
 
     if ! command -v rfs1 &>/dev/null; then
-        wget https://github.com/threefoldtech/zos_rfs/releases/download/v1.1.1/rfs
+        wget https://github.com/threefoldtech/rfs/releases/download/v1.1.1/rfs
         chmod +x rfs
         sudo ln -s $(realpath ./rfs) /usr/local/bin/rfs1
     fi
