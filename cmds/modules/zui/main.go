@@ -10,7 +10,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog/log"
 	"github.com/threefoldtech/zbus"
-	zui "github.com/threefoldtech/zosbase/pkg/zui_light"
+	zui "github.com/threefoldtech/zos_base/pkg/zui_light"
 	"github.com/urfave/cli/v2"
 )
 
