@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/pkg/errors"
-	gateway "github.com/threefoldtech/zosbase/pkg/gateway_light"
-	"github.com/threefoldtech/zosbase/pkg/utils"
+	gateway "github.com/threefoldtech/zos_base/pkg/gateway_light"
+	"github.com/threefoldtech/zos_base/pkg/utils"
 	"github.com/urfave/cli/v2"
 
 	"github.com/rs/zerolog/log"
