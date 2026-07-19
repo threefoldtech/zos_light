@@ -12,19 +12,20 @@ import (
 	"github.com/urfave/cli/v2"
 
 	substrate "github.com/threefoldtech/tfchain/clients/tfchain-client-go"
-	"github.com/threefoldtech/zosbase/pkg/app"
-	"github.com/threefoldtech/zosbase/pkg/capacity"
-	"github.com/threefoldtech/zosbase/pkg/environment"
-	"github.com/threefoldtech/zosbase/pkg/events"
-	"github.com/threefoldtech/zosbase/pkg/monitord"
-	"github.com/threefoldtech/zosbase/pkg/perf"
-	"github.com/threefoldtech/zosbase/pkg/perf/cpubench"
-	"github.com/threefoldtech/zosbase/pkg/perf/healthcheck"
-	"github.com/threefoldtech/zosbase/pkg/perf/iperf"
-	"github.com/threefoldtech/zosbase/pkg/perf/publicip"
-	registrar "github.com/threefoldtech/zosbase/pkg/registrar_light"
-	"github.com/threefoldtech/zosbase/pkg/stubs"
-	"github.com/threefoldtech/zosbase/pkg/utils"
+	"github.com/threefoldtech/zos_base/pkg/app"
+	"github.com/threefoldtech/zos_base/pkg/capacity"
+	"github.com/threefoldtech/zos_base/pkg/environment"
+	"github.com/threefoldtech/zos_base/pkg/events"
+	"github.com/threefoldtech/zos_base/pkg/monitord"
+	"github.com/threefoldtech/zos_base/pkg/perf"
+	"github.com/threefoldtech/zos_base/pkg/perf/cpubench"
+	"github.com/threefoldtech/zos_base/pkg/perf/healthcheck"
+	"github.com/threefoldtech/zos_base/pkg/perf/iperf"
+	"github.com/threefoldtech/zos_base/pkg/perf/provisiontest"
+	"github.com/threefoldtech/zos_base/pkg/perf/publicip"
+	registrar "github.com/threefoldtech/zos_base/pkg/registrar_light"
+	"github.com/threefoldtech/zos_base/pkg/stubs"
+	"github.com/threefoldtech/zos_base/pkg/utils"
 
 	"github.com/rs/zerolog/log"
 
@@ -178,6 +179,7 @@ func action(cli *cli.Context) error {
 	perfMon.AddTask(cpubench.NewTask())
 	perfMon.AddTask(publicip.NewTask())
 	perfMon.AddTask(healthcheck.NewTask())
+	perfMon.AddTask(provisiontest.NewTask())
 
 	if err = perfMon.Run(ctx); err != nil {
 		return errors.Wrap(err, "failed to run the scheduler")

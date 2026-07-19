@@ -11,13 +11,13 @@ import (
 	"github.com/cenkalti/backoff/v3"
 	"github.com/rs/zerolog/log"
 	substrate "github.com/threefoldtech/tfchain/clients/tfchain-client-go"
-	"github.com/threefoldtech/tfgrid-sdk-go/rmb-sdk-go/peer"
 	"github.com/threefoldtech/zbus"
-	"github.com/threefoldtech/zosbase/pkg/environment"
-	"github.com/threefoldtech/zosbase/pkg/stubs"
-	substrategw "github.com/threefoldtech/zosbase/pkg/substrate_gateway"
-	"github.com/threefoldtech/zosbase/pkg/utils"
-	zosapi "github.com/threefoldtech/zosbase/pkg/zos_api_light"
+	"github.com/threefoldtech/zos_base/pkg/environment"
+	"github.com/threefoldtech/zos_base/pkg/stubs"
+	substrategw "github.com/threefoldtech/zos_base/pkg/substrate_gateway"
+	"github.com/threefoldtech/zos_base/pkg/utils"
+	zosapi "github.com/threefoldtech/zos_base/pkg/zos_api_light"
+	"github.com/threefoldtech/zos_sdk_go/rmb-sdk-go/peer"
 	"github.com/urfave/cli/v2"
 )
 
@@ -121,7 +121,7 @@ func action(cli *cli.Context) error {
 			router.Serve,
 			peer.WithKeyType(peer.KeyTypeEd25519),
 			peer.WithRelay(relayURLs...),
-			peer.WithInMemoryExpiration(6*60*60), // 6 hours
+			peer.WithInMemoryExpiration(6*60), // 1 hours
 		)
 		if err != nil {
 			if cancel != nil {
